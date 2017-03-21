@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="gooqi">
+    <ion-title>输入基本信息</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="basic-info">
+
+ <ion-list>
+
+ <ion-list-header>基本信息</ion-list-header>
+
+    <ion-item (click)="inputName()">
+    <ion-label>姓名</ion-label>
+    <ion-note item-right>{{signup.name?signup.name:'请输入姓名'}}</ion-note>
+    </ion-item>
+    <ion-item (click)="inputPass()">
+    <ion-label>密码</ion-label>
+    <ion-note item-right>{{signup.password?'已设置':'未设置'}}</ion-note>
+    </ion-item>  
+ <ion-item>
+    <ion-label>性别</ion-label>
+  <ion-select [(ngModel)]="signup.sex">
+    <ion-option value="1" selected="true">男</ion-option>
+    <ion-option value="2">女</ion-option>
+  </ion-select>
+  </ion-item>
+  <ion-item>
+  <ion-label>生日</ion-label>
+  <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="signup.birthday"></ion-datetime>
+</ion-item>
+  <div padding margin-top>
+        <button ion-button (click)="onSignup()" type="submit" block>确认</button>
+      </div>
+
+ 
+  </ion-list>
+
+</ion-content>

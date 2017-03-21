@@ -1,5 +1,22 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
+import { IonicStorageModule } from '@ionic/storage';
+import { ChihuoData } from '../providers/chihuo-data';
+import { HttpService} from '../providers/http-service';
+import { UserData } from '../providers/user-data';
+
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { VerifyCodePage } from '../pages/signup/verify-code';
+import { BasicInfoPage } from '../pages/signup/basicinfo';
+import { ChooseCompanyPage } from '../pages/signup/choose-company';
+import { JoinCompanyPage } from '../pages/signup/join-company';
+import { CompanyInfoPage } from '../pages/signup/company-info';
+
+
+
+
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -12,10 +29,34 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+      GooqiApp,
+    LoginPage,
+    SignupPage,
+     BasicInfoPage
+     VerifyCodePage,
+     JoinCompanyPage,
+     CompanyInfoPage,
+
+
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      backButtonText:'返回',
+      tabsPlacement: 'bottom',
+      pageTransition: 'ios',
+      tabsHideOnSubPages:true,
+      platforms:{
+          ios:{
+               scrollAssist: false,    // Valid options appear to be [true, false]
+            autoFocusAssist: false
+          }
+      },
+    }),
+     IonicStorageModule.forRoot({
+         name: '__chihuo',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -23,8 +64,16 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+     GooqiApp,
+    LoginPage,
+    SignupPage,
+     BasicInfoPage
+     VerifyCodePage,
+     JoinCompanyPage,
+     CompanyInfoPage,
+
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler,UserData,HttpService,ChihuoData}]
 })
 export class AppModule {}

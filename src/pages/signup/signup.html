@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="gooqi">
+    <ion-title>填写手机号</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="signup-page" padding>
+
+  <ion-list margin-top>
+    <form #signupForm="ngForm" novalidate>
+      <ion-item margin-top>
+        <ion-input type="text" (keyup)="onKey($event)" [(ngModel)]="signup.phone" name="phone" #phone ="ngModel" placeholder="请输入手机号码"></ion-input>
+      <!--<p [hidden]="password.valid || submitted == false" color="danger" padding-left>
+        Password is required
+      </p>-->
+      </ion-item>
+
+      <div padding margin-top>
+        <button ion-button [disabled]="checkLength" (click)="onSignup(signupForm)" type="submit" block color="gooqi">下一步</button>
+      </div>
+    </form>
+  </ion-list>
+
+</ion-content>
