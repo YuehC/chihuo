@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NavController,AlertController,Events,NavParams} from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
-import { ChooseCompanyPage } from './choose-company';
+import { ChihuoPage } from '../chihuo/chihuo';
 
 
 @Component({
@@ -101,7 +101,7 @@ export class BasicInfoPage {
       }
       this.userData.register(this.signup).then((data)=>{
           if(data.errcode == 0){
-                    this.navCtrl.push(ChooseCompanyPage);
+                    this.navCtrl.push(ChihuoPage);
 
           }
           console.log(data);

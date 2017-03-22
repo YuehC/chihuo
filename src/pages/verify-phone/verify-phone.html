@@ -1,0 +1,31 @@
+<ion-header>
+
+<ion-navbar color="gooqi">
+<ion-title>手机验证</ion-title>
+
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list margin-top> 
+    <form #signupForm="ngForm" novalidate>
+          <ion-item margin-top>
+          <ion-input type="text"  [(ngModel)]="signup.phone" [disabled]="signup.inType == 2" name="phone"  placeholder="请输入手机号码"></ion-input>
+      </ion-item>
+
+      <ion-item padding>
+      <ion-input type="text"  [(ngModel)]="signup.code" name="code" #code ="ngModel" placeholder="请输入验证码"></ion-input> 
+      <button *ngIf="time == 60" ion-button item-right (tap)="confirmSendVali()"> 发送验证码 </button>
+       <button *ngIf="time != 60" ion-button clear item-right>{{time}} 秒 </button>
+      </ion-item>
+
+      <div padding>
+        <button ion-button [disabled] ="signup.code == '' || signup.phone == ''" (click)="onSubmit()" type="submit" block color="gooqi">确认</button>
+      </div>
+    </form>
+  </ion-list>
+
+
+</ion-content>

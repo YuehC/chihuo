@@ -1,0 +1,28 @@
+<ion-header>
+
+<ion-navbar color="gooqi">
+<ion-title>设置新密码</ion-title>
+
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list margin-top> 
+          <ion-item margin-top>
+        <ion-input type="password"  [(ngModel)]="signup.password"  placeholder="请输入密码"></ion-input>
+      </ion-item>
+        <ion-item margin-top>
+        <ion-input type="password"  [(ngModel)]="signup.checkPassword"   placeholder="请再输入一次"></ion-input>
+      </ion-item>
+
+
+      
+      <div padding>
+        <button ion-button [disabled] ="signup.password == '' || signup.checkPassword == ''" (click)="onSubmit()"  block color="gooqi">确认</button>
+      </div>
+  </ion-list>
+
+
+</ion-content>

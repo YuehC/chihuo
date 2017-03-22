@@ -10,9 +10,9 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { VerifyCodePage } from '../pages/signup/verify-code';
 import { BasicInfoPage } from '../pages/signup/basicinfo';
-import { ChooseCompanyPage } from '../pages/signup/choose-company';
-import { JoinCompanyPage } from '../pages/signup/join-company';
-import { CompanyInfoPage } from '../pages/signup/company-info';
+import { ChihuoPage } from '../pages/chihuo/chihuo';
+import { VerifyPhonePage } from '../pages/verify-phone/verify-phone';
+import { ResetPassPage } from '../pages/reset-pass/reset-pass';
 
 
 
@@ -30,13 +30,12 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContactPage,
     HomePage,
     TabsPage,
-      GooqiApp,
     LoginPage,
     SignupPage,
-     BasicInfoPage
+     BasicInfoPage,
      VerifyCodePage,
-     JoinCompanyPage,
-     CompanyInfoPage,
+     ChihuoPage,
+     VerifyPhonePage,
 
 
   ],
@@ -65,15 +64,14 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContactPage,
     HomePage,
     TabsPage,
-     GooqiApp,
     LoginPage,
     SignupPage,
-     BasicInfoPage
+     BasicInfoPage,
      VerifyCodePage,
-     JoinCompanyPage,
-     CompanyInfoPage,
+     ChihuoPage,
+     VerifyPhonePage,
 
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler,UserData,HttpService,ChihuoData}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},UserData,HttpService,ChihuoData]
 })
 export class AppModule {}
