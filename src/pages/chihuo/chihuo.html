@@ -1,10 +1,48 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>果奇</ion-title>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>吃货</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="">
-<div text-center margint-top padding class="no-events">暂无事件信息 </div>
+<ion-content class="outer-content speaker-list">
+  <ion-card *ngFor="let item of items" class="speaker-card">
 
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar item-left>
+          <img [src]="item.profilePic">
+        </ion-avatar>
+        {{item.name}}
+        <button ion-button icon-only (click)="openContact(item)" clear item-right>
+          <ion-icon name="help-circle"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content class="outer-content">
+      <ion-list>
+        <button ion-item *ngFor="let session of item.sessions" (click)="goToSessionDetail(session)">
+          <h3>{{session.name}}</h3>
+        </button>
+        <button ion-item (click)="goToSpeakerDetail(item)">
+          <h3>About {{item.name}}</h3>
+        </button>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-item>
+      <button ion-button icon-left (click)="goToSpeakerTwitter(item)" clear item-left>
+        <ion-icon name="logo-twitter"></ion-icon>
+        Tweet
+      </button>
+      <button ion-button icon-left (click)="openSpeakerShare(item)" clear item-right>
+        <ion-icon name="share"></ion-icon>
+        Share
+      </button>
+    </ion-item>
+
+  </ion-card>
 </ion-content>
