@@ -87,6 +87,7 @@ export class HttpService {
                         this.events.publish('eventError',this.data.errmsg);
                     }
                     resolve(this.data);
+                },err=>{
                 });
 
             })
