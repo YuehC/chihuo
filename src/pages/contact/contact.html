@@ -24,4 +24,23 @@
       <ion-icon name="arrow-forward" item-right></ion-icon>
     </button>
   </ion-list>
+
+
+  <ion-list class="userInfo" no-lines>
+   <button ion-item icon-left *ngFor="let item of appPages" (click)="goPage(item)">
+      <ion-icon item-left [name]="item.icon" [ngStyle]="{'color': item.iconColor}"></ion-icon>
+      {{item.title}}
+    </button>
+
+  </ion-list>
+
+  <ion-list class="menu">
+    <button ion-item icon-left>
+      <ion-icon item-left></ion-icon>
+     sss
+ </button>
+  </ion-list>
+
+
+
 </ion-content>
