@@ -17,10 +17,13 @@ import {ChihuoData} from '../../providers/chihuo-data';
   templateUrl: 'personal-info.html'
 })
 export class PersonalInfoPage {
-	userInfo:any ={id:0};
+    //这里赋值要加一下,不然容易报错
+	userInfo:{id:number,sex?:any,head_image?:string,address?:string,lng?:string,lat?:string,province?:string,city?:string,district?:string,street?:string,street_number?:number,longitude?:string,latitude?:string} ={id:0};
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public userData:UserData, public actionSheetCtrl:ActionSheetController, public events:Events, public chiData:ChihuoData, public alertCtrl:AlertController  ) {
   	userData.getUserInfo().then((data)=>{
+        console.log(data)
+        if(data != null)
             this.userInfo = data;
         });
   }
