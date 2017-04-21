@@ -12,7 +12,7 @@
       <ion-avatar item-left>
        <img src="userInfo.head_image?userInfo.head_image:'assets/img/bear.jpg'">
       </ion-avatar>
-      <h2>{{userInfo.name}}</h2>
+      <h2>YON</h2>
       <p>查看或者编辑个人资料</p>
        
   </button>
@@ -21,7 +21,7 @@
 
 
   <ion-list class="userInfo" >
-   <button ion-item icon-left *ngFor="let item of appPages" [navPush]="item.component">
+   <button ion-item icon-left *ngFor="let item of appPages" (click)="goPage(item)">
       <ion-icon item-left [name]="item.icon" [ngStyle]="{'color': item.iconColor}"></ion-icon>
       {{item.title}}
       

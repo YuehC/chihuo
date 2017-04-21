@@ -7,6 +7,7 @@ import { SettingPage } from '../setting/setting';
 import { DraftPage } from '../draft/draft';
 
 import { PersonalInfoPage } from '../personal-info/personal-info';
+
 import {UserData} from '../../providers/user-data';
 
 
@@ -48,11 +49,11 @@ export class PersonalPage {
     this.navCtrl.push(PersonalInfoPage)
   };
 
-  //goPage(page:PageObj){
-    //if(page.component!=''){
-      //this.navCtrl.push(page.component)
-    //}
-  //};
+  goPage(page:PageObj){
+    if(page.component!=''){
+      this.navCtrl.push(page.component)
+    }
+  };
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PersonalPage');

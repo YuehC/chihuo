@@ -35,7 +35,7 @@
 </button>
  <ion-item>
     <ion-label>性别</ion-label>
-    <ion-select  okText="确定" cancelText="取消">
+    <ion-select [(ngModel)]="userInfo.sex"  okText="确定" cancelText="取消" (ionChange)="editItem('sex',userInfo.sex)">
     <ion-option value="1" selected="true">男</ion-option>
     <ion-option value="2">女</ion-option>
   </ion-select>
