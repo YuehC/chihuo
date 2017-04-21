@@ -24,12 +24,12 @@
 
     <ion-card-content class="outer-content">
       <ion-list>
-        <button ion-item *ngFor="let session of item.sessions" (click)="goToSessionDetail(session)">
+        <ion-item *ngFor="let session of item.sessions" (click)="goToSessionDetail(session)">
           <h3>{{session.name}}</h3>
-        </button>
-        <button ion-item (click)="goToSpeakerDetail(item)">
+        </ion-item>
+        <ion-item (click)="goToSpeakerDetail(item)">
           <h3>About {{item.name}}</h3>
-        </button>
+        </ion-item>
       </ion-list>
     </ion-card-content>
 

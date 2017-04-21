@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { ActionSheet, ActionSheetController, Config, NavController } from 'ionic-angular';
 // import { InAppBrowser } from 'ionic-native';
 // import { TabsPage } from '../pages/tabs/tabs';
-import {ChihuoData} from '../../providers/chihuo-data';
+import { ChihuoData } from '../../providers/chihuo-data';
 
 
 

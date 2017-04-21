@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Setting page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>setting</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+<ion-item>
+<ion-label>
+<h3>无图模式</h3>
+<p>使用非WiFi网络时不下载图片</p>
+</ion-label>
+<ion-toggle [(ngModel)]="noImg" (ionchange)="noImage()"></ion-toggle>
+</ion-item>
+<ion-item>
+<ion-label>护眼模式</ion-label>
+<ion-toggle [(ngModel)]="eye" (ionchange)="proEye()"></ion-toggle>
+</ion-item>
+</ion-list>
+
+<ion-list>
+    <button ion-item  (tap)="bindWeixin()">
+        绑定微信
+        <ion-note item-right>{{hasBind?'已绑定':'未绑定'}}</ion-note>
+    </button>
+    <button ion-item [navPush]="verifyPhonePage" [navParams]="{inType:2,phone:userInfo.phone}">
+        修改密码
+    </button>
+
+
+
+</ion-list>
+
+<ion-list no-lines>
+
+    <ion-item text-center class="logout" (tap)="logout()">
+         退出登录
+    </ion-item>
+    
+</ion-list>
+
+
+</ion-content>

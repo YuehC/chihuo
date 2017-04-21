@@ -1,0 +1,47 @@
+<!--
+  Generated template for the PersonalInfo page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>个人信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="setLogo()">
+        <h2>头像</h2>
+		<ion-thumbnail item-right>
+		  <img src="userInfo.head_image?userInfo.head_image:'assets/img/bear.jpg'"/>
+		</ion-thumbnail>
+    </button>
+    <button ion-item (click)="inputText('name','姓名')">
+    真实姓名
+    <ion-note item-right>
+    {{userInfo.name?userInfo.name:'请输入姓名'}}
+    </ion-note>
+</button>
+<button ion-item (click)="inputText('username','昵称')">
+    昵称
+    <ion-note item-right>
+    {{userInfo.username?userInfo.username:'请输入昵称'}}
+    </ion-note>
+</button>
+ <ion-item>
+    <ion-label>性别</ion-label>
+    <ion-select  okText="确定" cancelText="取消">
+    <ion-option value="1" selected="true">男</ion-option>
+    <ion-option value="2">女</ion-option>
+  </ion-select>
+  </ion-item>
+    
+
+
+  </ion-list>
+</ion-content>

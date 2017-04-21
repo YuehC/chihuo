@@ -13,6 +13,14 @@ import { BasicInfoPage } from '../pages/signup/basicinfo';
 import { ChihuoPage } from '../pages/chihuo/chihuo';
 import { VerifyPhonePage } from '../pages/verify-phone/verify-phone';
 import { ResetPassPage } from '../pages/reset-pass/reset-pass';
+import { AttentionPage } from '../pages/attention/attention';
+import { PersonalPage } from '../pages/personal/personal';
+import { PersonalInfoPage } from '../pages/personal-info/personal-info';
+import { CollectPage } from '../pages/collect/collect';
+import { SettingPage } from '../pages/setting/setting';
+import { DraftPage } from '../pages/draft/draft';
+import { DiscoverPage } from '../pages/discover/discover';
+import { TextAreaPage } from '../pages/text-area/text-area';
 
 
 
@@ -36,6 +44,14 @@ import { TabsPage } from '../pages/tabs/tabs';
      VerifyCodePage,
      ChihuoPage,
      VerifyPhonePage,
+     AttentionPage,
+     PersonalPage,
+     PersonalInfoPage,
+     CollectPage,
+     SettingPage,
+     DraftPage,
+     DiscoverPage,
+     TextAreaPage,
 
 
   ],
@@ -70,6 +86,14 @@ import { TabsPage } from '../pages/tabs/tabs';
      VerifyCodePage,
      ChihuoPage,
      VerifyPhonePage,
+     AttentionPage,
+     PersonalPage,
+     PersonalInfoPage,
+     CollectPage,
+     SettingPage,
+     DraftPage,
+     DiscoverPage,
+     TextAreaPage,
 
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},UserData,HttpService,ChihuoData]

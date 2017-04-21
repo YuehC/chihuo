@@ -8,15 +8,18 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
      appPages=[
-    { title: '我的课表', component: '', icon: 'ios-book-outline',iconColor:'#ff3366' },
-    { title: '机构管理', component: '', icon: 'ios-medal-outline',iconColor:'#10aeff' },
-    { title: '我的账户', component: '', icon: 'ios-happy-outline',iconColor:'#ffc701' },
-    { title: '我的钱包', component:'', icon: 'md-mail-open',iconColor:'#10aeff'}
+    { title: '我的关注', component: '', icon: 'eye',iconColor:'#ff3366' },
+    { title: '我的收藏', component: '', icon: 'star',iconColor:'#10aeff' },
+    { title: '我的草稿', component: '', icon: 'paper',iconColor:'#ffc701' },
+    { title: '设置', component:'', icon: 'settings',iconColor:'#10aeff'}
   ];
 
 
   constructor(public navCtrl: NavController) {
 
   }
+  //gopage(){
+    //this.navCtrl.push()
+  //}
 
 }

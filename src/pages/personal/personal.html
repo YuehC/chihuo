@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      我
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="me">
+  <ion-list no-lines>
+  <button ion-item  clear full large (click)="goPersonalInfo()" > 
+      <ion-avatar item-left>
+       <img src="userInfo.head_image?userInfo.head_image:'assets/img/bear.jpg'">
+      </ion-avatar>
+      <h2>{{userInfo.name}}</h2>
+      <p>查看或者编辑个人资料</p>
+       
+  </button>
+</ion-list>
+    
+
+
+  <ion-list class="userInfo" >
+   <button ion-item icon-left *ngFor="let item of appPages" [navPush]="item.component">
+      <ion-icon item-left [name]="item.icon" [ngStyle]="{'color': item.iconColor}"></ion-icon>
+      {{item.title}}
+      
+    </button>
+
+
+  </ion-list>
+
+  
+
+
+
+</ion-content>
